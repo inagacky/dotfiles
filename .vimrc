@@ -82,8 +82,11 @@ set statusline+=[L=%l/%L]
 "現在行が全体行の何%目か表示
 set statusline+=[%p%%]
 
- " NERDTREEの設定
+" NERDTREEの設定
+" 常に表示
 autocmd VimEnter * execute 'NERDTree'
+""最後に残ったウィンドウがNERDTREEのみのときはvimを閉じる
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 let NERDTreeShowHidden = 1
 
 ""####キーマップ系####
