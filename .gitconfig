@@ -1,0 +1,40 @@
+[user]
+  name = d-inagaki 
+  email =  chanc.euse.0302@gmail.com 
+[core]
+  editor = vim
+[color]
+  ui = true
+[merge]
+  ff = false
+[pull]
+    # from 1.7.9
+    rebase = true
+[alias]
+  # git co [branch_name]
+  co = checkout
+  # git cot origin/[branch_name]
+  cot = checkout --track
+  ci = commit
+  # 直前のコミットの変更
+  cim = commit --amend
+  st = status
+  sh = show
+  br = branch
+  ss = stash save
+  sp = stash pop
+  sl = stash list
+  sa = stash apply
+  plr = pull --rebase
+  # reo [branch_name[A]] [branch_name[B]] [branch_name[C]]
+  # BとCのブランチの先祖を取得し、そこを元にAに対してrebaseかける
+  reo = rebase --onto
+  tr = log --graph --all --branches --date=iso --oneline --decorate=full --pretty=format:'%C(yellow)%h %C(green)%cd %Cblue%cn %Creset%s %Cred%d'
+[push]
+  # git pushの引数をサボったときのデフォルト値
+  ## nothing : サボれないようにするための設定。必ず指定する必要がある。
+  ## matching: 現行バージョンのデフォルト。ローカルとリモートで同じ名前のブランチがあったら、根こそぎ push する。カレントだけではないので、意図しないものまで push されちゃう。
+  ## upstream: カレントブランチに追跡ブランチが設定されている場合に、追跡ブランチに対してpushする。
+  ## simple  : Git 2.0 でデフォルトになる予定のもの。カレントブランチに追跡ブランチが設定されている、かつローカルとリモートのブランチ名が同じである場合に、追跡ブランチに対してpushする。これが一番安全らしい。。
+  ## current : カレントブランチと同名のリモートブランチがあれば、そこに push する。
+  default = simple
