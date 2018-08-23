@@ -6,10 +6,10 @@
 	url = https://github.com/Shougo/unite.vim
 [submodule ".vim/bundle/neomru.vim"]
 	path = .vim/bundle/neomru.vim
-	url = https://github.com/neomru.vim
+	url = https://github.com/Shougo/neomru.vim
 [submodule ".vim/bundle/neocomplete.vim"]
 	path = .vim/bundle/neocomplete.vim
-	url = https://github.com/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
