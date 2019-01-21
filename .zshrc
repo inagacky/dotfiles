@@ -1,6 +1,14 @@
 ZSH_THEME="robbyrussell"
 
-export PATH=/usr/local/bin:/usr/bin:/bin
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
+
+export PATH=/Users/inagaki/.nodebrew/current/bin:$PATH
+export PATH=/Users/inagaki/Library/Android/sdk/platform-tools:$PATH
+export PATH=/Users/inagaki/Library/Android/sdk/tools:$PATH
+export PATH=/Users/inagaki/Library/Android/sdk/emulator:$PATH
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+
 #source $ZSH/oh-my-zsh.sh
 # ´Ä¶­ÊÑ¿ô
 export LANG=ja_JP.UTF-8
@@ -68,8 +76,13 @@ PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
 ###################################
 # alias
 alias vi='vim'
+alias sl='ls -GF'
 alias ll='ls -la'
 alias ls="ls -GF"
 alias gls="gls --color"
+alias hist="history"
+alias cdw="cd /Users/inagaki/workspace"
+alias g="git"
+alias cdan="cd ~/Library/Android/sdk/tools"
 ###################################
 
