@@ -2,11 +2,15 @@ ZSH_THEME="robbyrussell"
 
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
 
-export PATH=/Users/inagaki/.nodebrew/current/bin:$PATH
-export PATH=/Users/inagaki/Library/Android/sdk/platform-tools:$PATH
-export PATH=/Users/inagaki/Library/Android/sdk/tools:$PATH
-export PATH=/Users/inagaki/Library/Android/sdk/emulator:$PATH
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PATH=/Users/d-inagaki/.nodebrew/current/bin:$PATH
+export PATH=/Users/d-inagaki/Library/Android/sdk/platform-tools:$PATH
+export PATH=/Users/d-inagaki/Library/Android/sdk/tools:$PATH
+export PATH=/Users/d-inagaki/Library/Android/sdk/emulator:$PATH
+export JAVA_HOME='/Users/d-inagaki/jdk-11.0.2.jdk/Contents/Home'
+#export PATH="/Applications/Android Studio.app/Contents/gradle/gradle-4.10.1/bin":$PATH
+export PATH=/usr/local/Cellar/gradle/5.3/bin:$PATH
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
 
 
 #source $ZSH/oh-my-zsh.sh
@@ -81,8 +85,17 @@ alias ll='ls -la'
 alias ls="ls -GF"
 alias gls="gls --color"
 alias hist="history"
-alias cdw="cd /Users/inagaki/workspace"
+alias cdw="cd /Users/d-inagaki/workspace"
 alias g="git"
+alias gi="git"
 alias cdan="cd ~/Library/Android/sdk/tools"
+alias do="docker"
+alias c="cd"
+alias sed="gsed"
+alias pls="ps aux"
+alias sls="du -sh ./*"
 ###################################
 
+# これいいね！
+function sample {
+}

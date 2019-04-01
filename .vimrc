@@ -10,11 +10,11 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 
   " Required:
-  set runtimepath+=/Users/inagaki/.vim/bundle/neobundle.vim/
+  set runtimepath+=/Users/d-inagaki/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/inagaki/.vim/bundle/'))
+call neobundle#begin(expand('/Users/d-inagaki/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 " ファイルオープンを便利に
@@ -42,7 +42,14 @@ set title                "編集中のファイル名を表示
 set showmatch            "括弧入力時の対応する括弧を表示
 set laststatus=2         "ステータス行を常に表示
 set wrap                 "ウィンドウ越えたら折り返し表示
-colorscheme desert      "colorの設定
+"autocmd ColorScheme * highlight Normal ctermbg=none
+"autocmd ColorScheme * highlight LineNr ctermbg=none
+"colorscheme desert      "colorの設定
+syntax enable
+set background=dark
+"colorscheme solarized
+let g:solarized_termcolors=256
+
 syntax on                "コードの色分け
 set autoindent           "改行時に前の行のインデントを継続する
 set smartindent          "オートインデント
@@ -51,7 +58,7 @@ set showcmd              "タイプ途中のコマンドを画面最下行に表
 set shiftwidth=4         "自動インデントの幅
 set ruler                "カーソルが何行目の何列目に置かれているか表示
 set showmode             "現在のモードを表示
-highlight Normal ctermbg=black ctermfg=grey
+"highlight Normal ctermbg=black ctermfg=grey
 
 ""#####カーソル移動系#####
 set virtualedit=block            "文字の無いところにカーソル移動する
