@@ -28,6 +28,7 @@
   sl = stash list
   sa = stash apply
   plr = pull --rebase
+  prune = fetch --prune
   # reo [branch_name[A]] [branch_name[B]] [branch_name[C]]
   # BとCのブランチの先祖を取得し、そこを元にAに対してrebaseかける
   reo = rebase --onto
@@ -40,9 +41,7 @@
   ## simple  : Git 2.0 でデフォルトになる予定のもの。カレントブランチに追跡ブランチが設定されている、かつローカルとリモートのブランチ名が同じである場合に、追跡ブランチに対してpushする。これが一番安全らしい。。
   ## current : カレントブランチと同名のリモートブランチがあれば、そこに push する。
   default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[commit]
+	template = /Users/daisuke/.commit_template
+[http]
+	postBuffer = 128M
