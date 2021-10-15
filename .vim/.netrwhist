@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/d-inagaki'
+let g:netrw_dirhist_2='/Users/d-inagaki/workspace/purchase_ai/FastApi/frontend/front/purchase_ai_app/node_modules/@nuxt/core/dist'
+let g:netrw_dirhist_1='/Users/d-inagaki/workspace/purchase_ai/FastApi/frontend/front/purchase_ai_app/node_modules/@nuxt/core'
+let g:netrw_dirhist_0='/Users/d-inagaki/workspace/purchase_ai/FastApi/frontend/front/purchase_ai_app/node-modules'
+let g:netrw_dirhist_9='/Users/d-inagaki/workspace/purchase_ai/FastApi/frontend'
+let g:netrw_dirhist_8='/Users/d-inagaki/workspace/purchase_ai/FastApi/frontend/front/purchase_ai_app'
+let g:netrw_dirhist_7='/Users/d-inagaki/workspace/dango_api/apps/dango/src/main/kotlin/com/nakajitsu/dango/domain/model/entity/dango'
+let g:netrw_dirhist_6='/Users/d-inagaki/workspace/dango_api/apps/dango/src/main/kotlin/com/nakajitsu/dango/domain/model/entity'
+let g:netrw_dirhist_5='/Users/d-inagaki/workspace/dango_api/apps/dango/src/main/kotlin/com/nakajitsu/dango/domain/model'
+let g:netrw_dirhist_4='/Users/d-inagaki/workspace/dango_api/apps/dango/src/main/kotlin/com/nakajitsu/dango/domain'
