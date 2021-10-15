@@ -1,24 +1,31 @@
 ZSH_THEME="robbyrussell"
 
-export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/bin:/sbin
 
-export PATH=/Users/d-inagaki/.nodebrew/current/bin:$PATH
-export PATH=/Users/d-inagaki/Library/Android/sdk/platform-tools:$PATH
-export PATH=/Users/d-inagaki/Library/Android/sdk/tools:$PATH
-export PATH=/Users/d-inagaki/Library/Android/sdk/emulator:$PATH
-export JAVA_HOME='/Users/d-inagaki/jdk-11.0.2.jdk/Contents/Home'
-#export PATH="/Applications/Android Studio.app/Contents/gradle/gradle-4.10.1/bin":$PATH
-export PATH=/usr/local/Cellar/gradle/5.3/bin:$PATH
-#export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-
-
+export PATH=/usr/local/bin:/usr/bin:/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/Users/daisuke/flutter/bin
+export PATH=$PATH:/usr/local/opt/postgresql@11/bin
 
 #source $ZSH/oh-my-zsh.sh
-# 環境変数
 export LANG=ja_JP.UTF-8
-# 色を使用出来るようにする
+
 autoload -Uz colors
 colors
+
+source ~/.zsh/git-prompt.sh
+
+fpath=(~/.zsh $fpath)
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+autoload -Uz compinit && compinit
+
+
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUPSTREAM=auto
+
+
 # 補完
 # 補完機能を有効にする
 autoload -Uz compinit
@@ -74,8 +81,10 @@ setopt hist_reduce_blanks
 # 高機能なワイルドカード展開を使用する
 setopt extended_glob
 
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-%# "
+#PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+#%# "
+setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+\$ '
 
 ###################################
 # alias
@@ -85,17 +94,19 @@ alias ll='ls -la'
 alias ls="ls -GF"
 alias gls="gls --color"
 alias hist="history"
-alias cdw="cd /Users/d-inagaki/workspace"
 alias g="git"
 alias gi="git"
 alias cdan="cd ~/Library/Android/sdk/tools"
-alias do="docker"
 alias c="cd"
 alias sed="gsed"
 alias pls="ps aux"
 alias sls="du -sh ./*"
+alias d='docker'
 ###################################
 
-# これいいね！
-function sample {
-}
+eval "$(rbenv init -)"
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
+export NVM_DIR="/Users/daisuke/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"

@@ -14,18 +14,6 @@ if has('vim_starting')
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/d-inagaki/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-" ファイルオープンを便利に
-NeoBundle 'Shougo/unite.vim'
-" Unite.vimで最近使ったファイルを表示できるようにする
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'scrooloose/nerdtree'
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""
@@ -88,8 +76,6 @@ set statusline+=[C=%c/%{col('$')-1}]
 set statusline+=[L=%l/%L]
 "現在行が全体行の何%目か表示
 set statusline+=[%p%%]
-
-let NERDTreeShowHidden = 1
 
 ""####キーマップ系####
 "ESC 2回でハイライト終了
