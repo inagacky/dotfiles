@@ -1,6 +1,6 @@
 [user]
-  name = daisuke-inagaki
-  email = 
+  name = inagacky 
+  email = chanc.euse.0302@gmail.com
 [core]
   editor = vim
 	excludesfile = /Users/inagaki/.gitignore_global
@@ -9,7 +9,6 @@
 [merge]
   ff = false
 [pull]
-    # from 1.7.9
     rebase = true
 [alias]
   # git co [branch_name]
